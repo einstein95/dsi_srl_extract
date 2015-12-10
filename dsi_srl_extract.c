@@ -706,9 +706,12 @@ int main(int argc, char *argv[])
 								case 0xA:
 									str[strpointer]='-';
 									break;
-								case ' ':
-									str[strpointer]='_';
+								case '"':
+									str[strpointer]='\'';
 									break;
+								// case ' ':
+									// str[strpointer]='_';
+									// break;
 							
 								default:
 									break;
