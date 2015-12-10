@@ -12,6 +12,7 @@
 #include "f_xy.h"
 #include "ec.h"
 #include "sha1.h"
+#include "minIni.h"
 
 #define WIN32 1
 #ifdef WIN32
@@ -327,7 +328,9 @@ int main(int argc, char *argv[])
 	uint8_t *mapped_file;
 	int rv;
 	int i;
-	int nocontent=0, nomodcrypt=0;
+	int nocontent=0; 
+	int nomodcrypt=0;
+	
 	int argi;
 	char str[256];
 	char gamestr[256];
@@ -351,6 +354,9 @@ int main(int argc, char *argv[])
 	uint8_t *bannersav_buffer;
 	uint32_t bannersav_length;
 	int save_srl_only = 1;
+
+	nomodcrypt=ini_getl("Main","no_mod_crypt",0,"dsi_srl_extract.ini");
+	ini_putl("Main","no_mod_crypt",nomodcrypt,"dsi_srl_extract.ini");
 
 	printf("%s for dsi by booto\n", argv[0]);
 	if(argc < 2)

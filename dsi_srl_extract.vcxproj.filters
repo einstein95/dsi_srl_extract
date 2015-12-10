@@ -42,6 +42,12 @@
     <ClInclude Include="f_xy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="minGlue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="minIni.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="sha1.c">
@@ -63,6 +69,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="f_xy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="minIni.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
